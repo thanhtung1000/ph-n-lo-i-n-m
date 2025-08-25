@@ -9,7 +9,7 @@ Dự án này giúp:
 - **Dự đoán và đánh giá** trên dữ liệu mới hoặc dữ liệu kiểm thử.
 
 Quy trình triển khai bao gồm:
-1. **Chuẩn bị dữ liệu**: tập dữ liệu chứa các thuộc tính rời rạc như hình dạng mũ, màu mũ, mùi, dấu vết dập nát… và một cột nhãn mục tiêu.  
+1. **Chuẩn bị dữ liệu**: tập dữ liệu chứa các thuộc tính rời rạc như hình dạng mũ, màu mũ, mùi,… và một cột nhãn mục tiêu.  
 2. **Tiền xử lý**: đảm bảo dữ liệu sạch, xử lý giá trị thiếu, rời rạc hóa các giá trị số nếu cần.  
 3. **Huấn luyện mô hình**: sử dụng thuật toán cây quyết định, giới hạn độ sâu hoặc số mẫu tối thiểu để tách nhằm tránh quá khớp.  
 4. **Lưu mô hình**: xuất thành file để sau này dự đoán nhanh mà không cần huấn luyện lại.  
