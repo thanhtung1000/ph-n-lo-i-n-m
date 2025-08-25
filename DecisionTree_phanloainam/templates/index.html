@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự đoán nấm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DỰ ĐOÁN NẤM ĂN ĐƯỢC HAY KHÔNG</h1>
+        <form action="/predict" method="post">
+            <label for="odor">Mùi (odor):</label>
+            <select name="odor" id="odor">
+                {% for key, value in odor_values.items() %}
+                    <option value="{{ key }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <label for="cap-color">Màu mũ nấm (cap-color):</label>
+            <select name="cap-color" id="cap-color">
+                {% for key, value in cap_color_values.items() %}
+                    <option value="{{ key }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <label for="gill-color">Màu phiến nấm (gill-color):</label>
+            <select name="gill-color" id="gill-color">
+                {% for key, value in gill_color_values.items() %}
+                    <option value="{{ key }}">{{ value }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <button type="submit">Dự đoán</button>
+        </form>
+    </div>
+</body>
+</html>
